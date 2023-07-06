@@ -7,6 +7,7 @@ import ErrorPage from './pages/ErrorPage.jsx';
 import AppLayout from './pages/AppLayout.jsx';
 import Login from './pages/Login.jsx';
 import CityList from './components/CityList.jsx';
+import CountriesList from './components/CountryList.jsx';
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -48,7 +49,10 @@ function App() {
             path='cities'
             element={<CityList cities={cities} isLoading={isLoading} />}
           />
-          <Route path='countries' element={<p>counties</p>} />
+          <Route
+            path='countries'
+            element={<CountriesList cities={cities} isLoading={isLoading} />}
+          />
           <Route path='form' element={<p>form</p>} />
         </Route>
 
