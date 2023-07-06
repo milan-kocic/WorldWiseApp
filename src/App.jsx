@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Product from './pages/Product.jsx';
+import HomePage from './pages/Homepage.jsx';
 import Pricing from './pages/Pricing';
-import Homepage from './pages/Homepage';
 import ErrorPage from './pages/ErrorPage.jsx';
 import AppLayout from './pages/AppLayout.jsx';
 import Login from './pages/Login.jsx';
@@ -37,24 +37,21 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Homepage />} />
+        <Route index element={<HomePage />} />
         <Route path='product' element={<Product />} />
         <Route path='pricing' element={<Pricing />} />
         <Route path='login' element={<Login />} />
         <Route path='app' element={<AppLayout />}>
-          <Route
-            index
-            element={<CityList cities={cities} isLoading={isLoading} />}
-          />
+          <Route index element={<Navigate replace to='cities' />} />
           <Route
             path='cities'
             element={<CityList cities={cities} isLoading={isLoading} />}
           />
+          <Route path='cities/:id' element={<City />} />
           <Route
             path='countries'
             element={<CountriesList cities={cities} isLoading={isLoading} />}
           />
-          <Route path='cities/:id' element={<City />} />
           <Route path='form' element={<Form />} />
         </Route>
 
