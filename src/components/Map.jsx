@@ -11,11 +11,13 @@ import {
 } from 'react-leaflet';
 import { useCities } from '../context/CitiesContext';
 import { useGeolocation } from '../hooks/useGeolocation';
+import { useUrlPosition } from '../hooks/useUrlPosition';
 import Button from './Button';
+
 function Map() {
   const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
-  const [searchParams] = useSearchParams();
+
   //ovde koristimo isLoading: isLoadingPostion, zato što već koristimo isLoading iz drugih state-a,
   //pa smo ga na ovaj način druga;ije definisali (imenovali), inače u suprotnom bi smo samo pisali isLoading,
   //i ne bi bilo potrebe da pišemo isLoading: isLoading, tako isto i za position
@@ -24,9 +26,8 @@ function Map() {
     position: geolocationPosition,
     getPosition
   } = useGeolocation();
-  const mapLat = searchParams.get('lat');
-  const mapLng = searchParams.get('lng');
 
+  const [mapLat, mapLng] = useUrlPosition();
   useEffect(
     function () {
       if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
@@ -97,7 +98,7 @@ function DetectClick() {
   const navigate = useNavigate();
 
   useMapEvents({
-    click: (e) => navigate(`?lat=${e.latlng.lat}&lng=${e.latlng.lng}`)
+    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`)
   });
 }
 
