@@ -37,7 +37,76 @@
       "id": 98443197
     },
     {
+      "cityName": "Nis",
+      "country": "Serbia",
+      "emoji": "🇷🇸",
+      "date": "2023-07-19T10:24:04.651Z",
+      "notes": "",
+      "position": {
+        "lat": "43.31721846539873",
+        "lng": "21.905364990234375"
+      },
       "id": 98443198
+    },
+    {
+      "cityName": "Leskovac",
+      "country": "Serbia",
+      "emoji": "🇷🇸",
+      "date": "2023-07-19T10:27:11.275Z",
+      "notes": "",
+      "position": {
+        "lat": "42.98053954751642",
+        "lng": "21.934204101562504"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Tuzla",
+      "country": "Bosnia and Herzegovina",
+      "emoji": "🇧🇦",
+      "date": "2023-07-19T10:31:16.706Z",
+      "notes": "",
+      "position": {
+        "lat": "44.63739123445587",
+        "lng": "18.654785156250004"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Budapest",
+      "country": "Hungary",
+      "emoji": "🇭🇺",
+      "date": "2023-07-19T10:31:29.007Z",
+      "notes": "",
+      "position": {
+        "lat": "47.53203824675999",
+        "lng": "19.00634765625"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Voronezh",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-07-19T10:31:34.292Z",
+      "notes": "",
+      "position": {
+        "lat": "51.713416052417614",
+        "lng": "39.28710937500001"
+      },
+      "id": 98443203
+    },
+    {
+      "cityName": "Lappeenranta",
+      "country": "Finland",
+      "emoji": "🇫🇮",
+      "date": "2023-07-19T10:31:56.469Z",
+      "notes": "",
+      "position": {
+        "lat": "60.89838845280531",
+        "lng": "28.125000000000004"
+      },
+      "id": 98443204
     }
   ]
 }
